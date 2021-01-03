@@ -1,0 +1,13 @@
+def test(n) :
+    if n == 3 : return ["***","* *","***"]
+    x = test(n//3)
+    y = []
+    for a in range(len(x)) :
+        y.append(x[a]*3)
+    blank = " "*len(x[0])
+    z = []
+    for b in range(len(x)) :
+        z.append(x[b]+blank+x[b])
+    return y+z+y
+
+print('\n'.join(test(int(input()))))
